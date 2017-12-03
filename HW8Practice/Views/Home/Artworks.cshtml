@@ -1,0 +1,31 @@
+﻿@model IEnumerable<HW8Practice.Models.ArtistArtworkVM>
+
+@{
+    ViewBag.Title = "Artworks";
+}
+
+<h2>Artworks</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.artwork.aName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.artist.aName)
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(model => item.artwork.aName)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.artist.aName)
+            </td>
+        </tr>
+    }
+</table>
