@@ -17,6 +17,15 @@ namespace HW8Practice.Controllers
             return View();
         }
 
+        public ActionResult Get(string keyG)
+        {
+            var keyG2 = Convert.ToInt32(keyG);
+            List<string> arts = new List<string>();
+            arts = db.Artworks.Where(s => db.Classifications.Where(a => a.idG == keyG2).Select(d => d.idA).ToList().Contains(s.id)).Select(f => f.aName).ToList();
+
+            return Json(arts, JsonRequestBehavior.AllowGet);
+        }
+
         // GET: Artworks
         public ActionResult Artworks()
         {

@@ -17,9 +17,11 @@ namespace HW8Practice.Models
         public int id { get; set; }
 
         [Required]
-        [StringLength(100)]
+        [StringLength(50)]
         public string aName { get; set; }
 
+        [Required]
+        [RestrictedDate]
         [Column(TypeName = "date")]
         public DateTime DOB { get; set; }
 

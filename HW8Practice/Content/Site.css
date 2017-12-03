@@ -16,3 +16,14 @@ textarea {
     max-width: 280px;
 }
 
+.navbar-brandS {
+    float: left;
+    padding: 15px 15px;
+    font-size: 14px;
+    line-height: 20px;
+    color: grey;
+}
+
+.navbar-brandS {
+    color: #777777;
+}
